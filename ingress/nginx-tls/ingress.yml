@@ -54,9 +54,14 @@ kind: Ingress
 metadata:
   name: example-ingress
   annotations:
+    kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: "nginx"
   namespace: ingress-test
 spec:
+  tls:
+  - hosts:
+    - k8stest.kter.jp
+    secretName: k8stest-tls
   rules:
   - host: k8stest.kter.jp
     http:
