@@ -2,6 +2,11 @@
 
 ## 手順
 
+設定を変更
+
+1. ingress.yml内のホスト名を自分のものに編集
+1. tls-configmap.yml内のメールアドレスを自分のものに編集
+
 kubernetesにデプロイ
 
 ```
